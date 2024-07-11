@@ -1,0 +1,18 @@
+function checkAnswer(optionId) {
+    var option = document.getElementById(optionId);
+    var feedback = document.getElementById('feedback');
+
+    // Reset styles
+    document.getElementById('option1').classList.remove('correct', 'incorrect');
+    document.getElementById('option2').classList.remove('correct', 'incorrect');
+
+    if (optionId === 'option1') {
+        // Correct answer (charter school)
+        option.classList.add('correct');
+        feedback.innerHTML = "Correct! Charter schools offer innovative educational approaches.";
+    } else {
+        // Incorrect answer (public school)
+        option.classList.add('incorrect');
+        feedback.innerHTML = "Incorrect. Charter schools often have more flexibility in curriculum.";
+    }
+}
